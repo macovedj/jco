@@ -364,8 +364,6 @@ impl Instantiator<'_, '_> {
             // This is only used when the component exports core wasm modules,
             // but that's not possible to test right now so leave these as
             // unimplemented.
-            GlobalInitializer::SaveStaticModule(_) => unimplemented!(),
-            GlobalInitializer::SaveModuleImport(_) => unimplemented!(),
 
             // This is required when strings pass between components within a
             // component and may change encodings. This is left unimplemented
@@ -667,9 +665,9 @@ impl Instantiator<'_, '_> {
 
                 // ignore type exports for now
                 Export::Type(_) => {}
+                _ => {}
 
                 // This can't be tested at this time so leave it unimplemented
-                Export::Module(_) => unimplemented!(),
             }
         }
         self.gen.esm_bindgen.populate_export_aliases();

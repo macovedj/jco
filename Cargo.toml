@@ -30,13 +30,13 @@ version = "0.1.0"
 anyhow = "1.0.71"
 base64 = "0.21.2"
 heck =  { version = "0.4", features = ["unicode"] }
-indexmap = "1.9"
-wasm-encoder = "0.29.0"
-wasm-metadata = "0.8.0"
-wasmparser = "0.107.0"
-wasmprinter = "0.2.59"
-wasmtime-environ = { version = "10.0.1", features = ["component-model"] }
-wat = "1.0.66"
-wit-bindgen = { git = "https://github.com/bytecodealliance/wit-bindgen", rev = "e69cf5db8754f829637e25491c560ec0d9728852" }
-wit-component = { version = "0.11.0", features = ['dummy-module'] }
-wit-parser = "0.8.0"
+indexmap = "2.0"
+wasm-encoder = { git = "https://github.com/macovedj/wasm-tools", branch = "bundle"}
+wasm-metadata = { git = "https://github.com/macovedj/wasm-tools", branch = "bundle"}
+wasmparser = { git = "https://github.com/macovedj/wasm-tools", branch = "bundle"}
+wasmprinter = { git = "https://github.com/macovedj/wasm-tools", branch = "bundle"}
+wasmtime-environ = { path = "../wasmtime/crates/environ", features = ["component-model"] }
+wat = { git = "https://github.com/macovedj/wasm-tools", branch = "bundle"}
+wit-bindgen = { git = "https://github.com/macovedj/wit-bindgen", branch = "bundle" }
+wit-component = { git = "https://github.com/macovedj/wasm-tools", branch = "bundle", features = ['dummy-module']}
+wit-parser = { git = "https://github.com/macovedj/wasm-tools", branch = "bundle"}
