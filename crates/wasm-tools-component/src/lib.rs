@@ -191,6 +191,7 @@ impl WasmTools for WasmToolsJs {
                     producers,
                     children,
                     range,
+                    ..
                 } => {
                     let children_len = children.len();
                     for child in children {
@@ -207,6 +208,7 @@ impl WasmTools for WasmToolsJs {
                     name,
                     producers,
                     range,
+                    ..
                 } => (name, producers, ModuleMetaType::Module, range),
             };
 
